@@ -14,10 +14,10 @@ const allRoutes = require("./routes");
 app.use("/api", allRoutes);
 
 const projectRouter = require("./routes/project.routes");
-app.use("/api", isAuthenticated, projectRouter);
+app.use("/api", projectRouter);
 
 const taskRouter = require("./routes/task.routes");
-app.use("/api", isAuthenticated, taskRouter);
+app.use("/api", taskRouter);
 
 const authRouter = require("./routes/auth.routes");
 app.use("/auth", authRouter);
